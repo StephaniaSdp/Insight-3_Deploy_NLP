@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Judul Halaman -->
+	<title>INSIGHT CLASS</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Icon -->
+	<link rel="shortcut icon" href="{{ url_for('static', filename='Insight_icon.ico') }}">
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href={{ url_for('static', filename='/css/bootstrap.min.css') }} type="text/css">
+	<link rel="stylesheet" href={{ url_for('static', filename='/css/client_side.css') }}  type="text/css">
+	
+	<!-- JavaScript -->
+	<script src={{ url_for('static', filename='/js/jquery_3.6.0.min.js') }} ></script>
+	<script src={{ url_for('static', filename='/js/bootstrap_3.4.1.min.js') }} ></script>
+</head>
+
+<body id="halamanku" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+	<!-- Navigation Bar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			
+			<!-- Logo -->
+			<div class="navbar-header">
+				<img src={{ url_for('static', filename='/images/Insight_logo.jpg') }} alt="Insight Logo" 
+				width="50" height="50" align="left">
+				<a class="navbar-brand" href="#halamanku">&#160; Insight class</a>
+			</div>
+			
+			<!-- Daftar Halaman -->
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#informasi">INFORMASI</a></li>
+					<li><a href="#aplikasi">APLIKASI</a></li>
+					<li><a href="#anggotaKelompok">ANGGOTA KELOMPOK</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Bagian Halaman (Informasi) -->
+	<div id="informasi" class="container-fluid">
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-sm-6">
+				<!-- Deskripsi Aplikasi -->
+				<h2>UP-FILM</h2>
+				<h4>UPgrade FILM</h4><br>
+				<p style="text-align: justify;text-justify: inter-word;">
+					Aplikasi ini dibuat khusus untuk mengindentifikasi jenis sentimen / tanggapan yang diberikan 
+					oleh penikmat film dari berbagai jenis genre film. Sentimen yang diinputkan terlebih dahulu akan diklasifikasikan menjadi 2 jenis 
+					sentimen yaitu sentimen positive dan sentimen negative. Jika hasil prediksi menunjukan bahwa sentimen berjenis
+					negative, maka ini mengartikan bahwa produsen dari film tersebut perlu mengembangkan
+					hal-hal yang dirasa kurang sehingga bisa memproduksi film yang lebih banyak memberi feedback positive.
+				</p>
+			    <br>
+
+				<!-- Tombol Mulai -->
+				<nav id="navgo" class="navbar" style="background-color:#ffffff;z-index: 0;">
+					<ul class="nav nav-pills">
+						<li class="nav-item">
+							<a class="btn btn-default btn-lg" href="#aplikasi" style="background-color:#000000">Mulai</a>
+						</li>
+					</ul>
+				</nav>
+
+			</div>
+			<div class="col-sm-6">
+				<br>
+				<br>
+				<!-- Gambar Deskripsi Aplikasi -->
+				<img src={{ url_for('static', filename='/images/film-display.JPG') }} width="600" ></img>
+			</div>
+		</div>
+	</div>
+
+	<!-- Bagian Halaman (Aplikasi) -->
+	<!-- Bagian Halaman (Aplikasi) -->
+	<div id="aplikasi" data-bs-spy="scroll" data-bs-target="#navgo" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+		<br><br>
+		<div class="row">
+			<div class="col-sm-6">
+				<!-- HP 1 (Oknum) -->
+					<div class="chat-box1">
+						<!-- Header 1 (Oknum) -->
+						<div class="chat-box-header1">Input Sentimen</div>
+						<div class="chat-input1">      
+							<form>
+								<!-- Input Chat 1 (Oknum) -->
+								<input type="text" id="chat-input1" placeholder="Masukan sentimen yang akan diprediksi ..."/>
+								
+								<!-- Tombol Send 1 (Oknum) -->
+								<button type="submit" class="chat-submit1" id="chat-submit1"><i class="material-icons">send</i></button>
+							</form>      
+						</div>
+						
+						<div class="chat-box-body1">
+							<div class="chat-box-overlay1"></div>
+							<div class="chat-logs1">
+								<!-- Chat Log 1 (Oknum) -->
+							</div>
+						</div>
+						
+					</div>
+			</div>
+			
+			<div class="col-sm-6">
+				<!-- HP 2 (Anda) -->
+					<div class="chat-box2">
+						<!-- Header 2 (Anda) -->
+						<div class="chat-box-header2">Prediksi Sentimen</div>
+						
+						<div class="chat-box-body2">
+							<div class="chat-box-overlay2"></div>
+							<div class="chat-logs2">
+								<!-- Chat Log 2 (Anda) -->
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Bagian Halaman (Anggota Kelompok) -->
+	<div id="anggotaKelompok" class="container-fluid text-center">
+		<br>
+		<h2>ANGGOTA KELOMPOK</h2>
+		<h4>Insight 3</h4>
+		<br>
+		<div class="row slideanim">
+			<div class="col-sm-4">
+				<span class="glyphicon glyphicon-user logo-small"></span>
+				<h4>FARHAN RAHMAN</h4>
+				<p>Politeknik Negeri Ujung Pandang</p>
+			</div>
+			<div class="col-sm-4">
+				<span class="glyphicon glyphicon-user logo-small"></span>
+				<h4>GUSTI MADE WIJAYA</h4>
+				<p>Universitas Udayana</p>
+			</div>
+			<div class="col-sm-4">
+				<span class="glyphicon glyphicon-user logo-small"></span>
+				<h4>I GUSTI KETUT ADI TRIYOGA PUTRA</h4>
+				<p>Universitas Udayana</p>
+			</div>
+		</div>
+	    <br>
+	    <div class="row slideanim">
+			<div class="col-sm-6">
+				<span class="glyphicon glyphicon-user logo-small"></span>
+				<h4>STEPHANIA GETRUDIS INACONTA SADIPUN</h4>
+				<p>Universitas Udayana</p>
+			</div>
+			<div class="col-sm-6">
+				<span class="glyphicon glyphicon-user logo-small"></span>
+				<h4>TIARA AULIYA PUTRI</h4>
+				<p>Universitas Udayana</p>
+			</div>
+	    </div>
+	</div>
+
+	<!-- Footer -->
+	<footer class="container-fluid text-center">
+		<a href="#halamanku" title="To Top">
+			<span class="glyphicon glyphicon-chevron-up"></span>
+		</a>
+		<p>Orbit Future Academy <br> <a href="https://orbitfutureacademy.id/">orbitfutureacademy.id</a></p>
+	</footer>
+
+	<!-- JavaScript untuk Animasi Scroll dan Prediksi Model -->
+	<script  src={{ url_for('static', filename='/js/client_side.js') }}></script>
+
+</body>
+</html>
